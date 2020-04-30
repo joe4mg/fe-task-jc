@@ -1,3 +1,48 @@
 body {
-  color: red;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tile-grid {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.tile {
+  display: flex;
+  height: 5vh;
+  padding: 0.5vh;
+  margin: 0.5vh;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 1vh);
+
+  cursor: pointer;
+  background-color: lightcyan;
+}
+
+@media only screen and (min-width: 600px) {
+  .tile {
+    width: calc(50% - 1vh);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .tile {
+    width: calc(33.33% - 1vh);
+  }
+}
+
+.tile--selected {
+  outline: 2px solid cyan;
+}
+
+.tile--active {
+  background-color: black;
+  color: white;
 }
